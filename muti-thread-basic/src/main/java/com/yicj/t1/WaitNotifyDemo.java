@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class C1_7_3 implements Runnable {
+public class WaitNotifyDemo implements Runnable {
     private static final byte [] flag = new byte[0] ;
     public void run() {
         synchronized (flag){
@@ -26,8 +26,8 @@ public class C1_7_3 implements Runnable {
     public static void main(String[] args) {
 
         ExecutorService es = Executors.newCachedThreadPool();
-        es.execute(new C1_7_3());
-        es.execute(new C1_7_3());
+        es.execute(new WaitNotifyDemo());
+        es.execute(new WaitNotifyDemo());
         es.execute(()->{
             try {
                 Thread.sleep(1000L);

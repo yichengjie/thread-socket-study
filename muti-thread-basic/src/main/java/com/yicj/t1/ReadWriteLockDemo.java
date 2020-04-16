@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 //这个结果有点意外
 @Slf4j
-public class C1_7_6 {
+public class ReadWriteLockDemo {
 
     private static final ReentrantReadWriteLock lock = new ReentrantReadWriteLock() ;
     private static Deque<Integer> data = new LinkedList<>();
