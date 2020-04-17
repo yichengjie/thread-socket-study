@@ -52,6 +52,13 @@ public class CommonUtils {
         System.out.println(i);
     }
 
+    public static boolean strIsNotEmpty(String str){
+        if (str == null || str.trim().length() == 0){
+            return false ;
+        }
+        return true ;
+    }
+
 
     public static String getStdmfDateTime(){
         return "20200417" ;
