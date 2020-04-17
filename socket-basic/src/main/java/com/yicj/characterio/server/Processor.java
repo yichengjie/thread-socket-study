@@ -1,6 +1,6 @@
-package com.yicj.character;
+package com.yicj.characterio.server;
 
-import com.yicj.utils.StreamUtils;
+import com.yicj.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
@@ -38,9 +38,9 @@ public class Processor implements Runnable {
         }catch (IOException e){
             log.error("Error on process command",e);
         }finally {
-            StreamUtils.close(br);
-            StreamUtils.close(pw);
-            StreamUtils.close(socket);
+            CommonUtils.close(br);
+            CommonUtils.close(pw);
+            CommonUtils.close(socket);
         }
 
     }

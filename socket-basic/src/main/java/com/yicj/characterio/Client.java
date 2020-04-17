@@ -1,6 +1,6 @@
-package com.yicj.character;
+package com.yicj.characterio;
 
-import com.yicj.utils.StreamUtils;
+import com.yicj.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,9 +40,9 @@ public class Client {
         } catch (IOException e) {
             log.error("Error on connection",e);
         }finally {
-            StreamUtils.close(ir) ;
-            StreamUtils.close(sr) ;
-            StreamUtils.close(socket) ;
+            CommonUtils.close(ir) ;
+            CommonUtils.close(sr) ;
+            CommonUtils.close(socket) ;
         }
         System.out.println("bye");
     }

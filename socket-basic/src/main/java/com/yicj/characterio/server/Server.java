@@ -1,6 +1,6 @@
-package com.yicj.character;
+package com.yicj.characterio.server;
 
-import com.yicj.utils.StreamUtils;
+import com.yicj.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
@@ -68,7 +68,7 @@ public class Server implements Runnable{
         }catch (IOException e){
             log.error("Error on run server", e);
         }finally {
-            StreamUtils.close(br);
+            CommonUtils.close(br);
             server.close();
         }
 
