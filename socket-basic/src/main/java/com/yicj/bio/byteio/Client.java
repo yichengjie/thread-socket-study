@@ -1,4 +1,4 @@
-package com.yicj.io.byteio;
+package com.yicj.bio.byteio;
 
 import com.yicj.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;

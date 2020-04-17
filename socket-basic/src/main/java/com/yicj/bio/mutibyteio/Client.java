@@ -1,4 +1,4 @@
-package com.yicj.io.mutibyteio;
+package com.yicj.bio.mutibyteio;
 
 import com.yicj.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;

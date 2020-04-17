@@ -1,4 +1,4 @@
-package com.yicj.io.characterio;
+package com.yicj.bio.characterio;
 
 import com.yicj.utils.CommonUtils;
 import lombok.extern.slf4j.Slf4j;
