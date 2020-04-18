@@ -11,6 +11,7 @@
         <module>muti-thread-basic</module>
         <module>socket-basic</module>
         <module>object-serialize</module>
+        <module>dynamic-proxy</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -160,6 +161,12 @@
                 <groupId>de.ruedigermoeller</groupId>
                 <artifactId>fst</artifactId>
                 <version>2.57</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.27.0-GA</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
