@@ -4,16 +4,16 @@ import com.yicj.service.Service;
 import com.yicj.service.impl.ServiceImpl;
 import javassist.*;
 
-public class JavassistHelloWorld {
+public class JavassistHello {
 
     public static void main(String[] args) throws Exception {
 
         String clsName = "DynaServiceImpl";
-        String pkgName = JavassistHelloWorld.class.getPackage().getName() ;
+        String pkgName = JavassistHello.class.getPackage().getName() ;
         //获得默认的类池
         ClassPool clsPool = ClassPool.getDefault();
         //添加classpath
-        clsPool.insertClassPath(new ClassClassPath(JavassistHelloWorld.class)) ;
+        clsPool.insertClassPath(new ClassClassPath(JavassistHello.class)) ;
         //申明包
         clsPool.importPackage(pkgName);
         //引用Service，ServiceImpl
@@ -70,7 +70,7 @@ public class JavassistHelloWorld {
         //通过构造函数创建此对象，为ServiceImpl对象创建代理
         Object obj = clazz.getConstructor(Service.class).newInstance(new ServiceImpl());
         //通过反射调用上面的test方法
-        obj.getClass().getMethod("test", new Class[]{}).invoke(obj,new Object[]{}) ;
+        obj.getClass().getMethod("test", new Class[]{}).invoke(obj) ;
         //也可以转为对应的接口，在调相应的接口方法
         ((Service)obj).process(2);
     }
