@@ -33,7 +33,7 @@ public class UserServiceTest {
     @Test
     public void testInvoke101() throws Throwable {
         DynamicInvoker invoker = ctx.getBean(Proxy$UserService.class);
-        Objecgt ret = invoker.invoke(101, new Object[]{2}) ;
+        Object ret = invoker.invoke(101, new Object[]{2}) ;
         System.out.println(ret);
     }
 
