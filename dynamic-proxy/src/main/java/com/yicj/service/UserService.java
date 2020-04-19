@@ -1,6 +1,8 @@
 package com.yicj.service;
 
-public interface Service {
+public interface UserService {
 
     void process(int max) ;
+
+    String helloSC() ;
 }
